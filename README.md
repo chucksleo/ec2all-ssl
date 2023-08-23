@@ -1,14 +1,26 @@
-# terrafor for infra team
+# terraform for infra team
 
-PRE REQ 
+# EC2 Instance Infrastructure Setup
+
+This repository contains the Terraform configuration to set up EC2 instances along with associated security groups in AWS. The defined EC2 instances include:
+
+1. Design Server: An EC2 instance for design-related tasks.
+2. Govern Server: An EC2 instance for governance-related tasks.
+3. Automation Server: An EC2 instance for automation tasks.
+
+Each EC2 instance is associated with a specific Amazon Machine Image (AMI) and configured with the necessary networking settings.
+
+
+# PRE REQ 
+
+Before you begin, ensure you have the following prerequisites.
+
 - dns zone needed before this script will work
 - export AWS_PROFILE=myprofile
 
-HOW TO USE
+# HOW TO USE
 - the tfvars file is the only file to enter values
 - rename to the specifc deployment as needed
-
-
 
 edit *.tfvars to populate the ec2-route53-vpc modules
 this will 
