@@ -56,3 +56,23 @@ resource_tags = {
        Project = "Project"                            // tag for cost reports - specify the project
 }
 ```
+
+# SAMPLE ec2
+```
+module "ec2" {
+  source                 = "./modules/ec2"
+  key_name               = var.key_name
+  ami_id_a                 = var.ami_id_a
+  ami_id_d                 = var.ami_id_d
+  ami_id_g                 = var.ami_id_g
+  instance_class         = var.instance_class
+  public_1               = var.public_1
+  design_sg              = module.sg.design_sg
+  vpc_security_group_ids = module.sg.vpc_security_group_ids
+  resource_tags          = var.resource_tags
+  instance_name_a          = var.instance_name_a
+  instance_name_d          = var.instance_name_d
+  instance_name_g          = var.instance_name_g
+  name_prefix            = var.name_prefix
+  name_suffix            = var.name_suffix
+}```
